@@ -1,2 +1,0 @@
-hello world 1
-this is a go web demo
