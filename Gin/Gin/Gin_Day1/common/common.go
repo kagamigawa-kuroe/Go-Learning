@@ -83,6 +83,10 @@ func VerifySign(c *gin.Context) {
 
 	exp, _ := strconv.ParseInt(config.API_EXPIRY, 10, 64)
 
+	//http://localhost:8080/v2/member/add?ts=1655992012
+	//如果不在query中加入ts 或者加入的unix时间过早 导致过期
+	//则会触发ts错误
+
 	// 验证过期时间
 	if ts > GetTimeUnix() || GetTimeUnix() - ts >= exp {
 		RetJson("500", "Ts Error", "", c)

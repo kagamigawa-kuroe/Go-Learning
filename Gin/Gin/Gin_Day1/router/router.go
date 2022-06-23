@@ -21,6 +21,7 @@ func InitRouter(r *gin.Engine)  {
 	}
 
 	// v2 版本
+	// 任何先经过v2的路由
 	GroupV2 := r.Group("/v2", common.VerifySign)
 	{
 		GroupV2.Any("/product/add", v2.AddProduct)
