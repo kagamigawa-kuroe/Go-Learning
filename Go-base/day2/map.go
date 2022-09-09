@@ -8,7 +8,7 @@ import "fmt"
 //不得不说真的很离谱
 
 func main() {
-	m1 := map[int]string{1: "123", 2: "456"}
+	m1 := map[int]string{1: "123", 2: "456", 3: "789", 4: "1010"}
 	//或者使用make
 	var m2 map[int]string = make(map[int]string)
 	fmt.Println(m1, m2)

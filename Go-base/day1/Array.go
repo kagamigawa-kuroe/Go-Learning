@@ -1,5 +1,6 @@
 package main
 
+/// fmt = format
 import (
 	"fmt"
 )
@@ -8,6 +9,8 @@ func main() {
 	//和c语言的数组一样
 	//go语言的数组也是固定长度 无法改变的
 	//一维数组
+
+	// 可以把数组看成一种类型 类型结构就是[x]type
 	var arr1 [5]int = [5]int{1, 2, 3, 4, 5}
 	fmt.Println(arr1)
 
@@ -35,6 +38,9 @@ func main() {
 	modifyArr2(&arr)
 	fmt.Println(arr)
 	fmt.Println(*ptr)
+
+	sl := arr[1:4]
+	fmt.Println(sl)
 }
 
 func modifyArr1(a [5]int) {

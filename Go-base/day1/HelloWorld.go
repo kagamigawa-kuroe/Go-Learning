@@ -12,6 +12,7 @@
 
 package main
 
+/// fmt = format
 import (
 	"fmt"
 )
