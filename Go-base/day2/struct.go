@@ -1,10 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Person struct {
 	name string
 	age  int
+}
+
+func (r *Person) to_string(){
+	fmt.Println(r.name)
+	fmt.Println(r.age)
 }
 
 func main() {
@@ -29,4 +36,5 @@ func main() {
 	}{name: "123", age: 123}
 
 	fmt.Println(p4)
+	p2.to_string();
 }
